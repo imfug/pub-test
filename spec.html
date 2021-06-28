@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head itemscope="itemscope" itemtype="https://imfug.com/pub">
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://static.imfug.com/pub/css/main.css"/>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://static.imfug.com/pub/script/render.js"></script>
+  <title>Sample document</title>
+</head>
+
+<body>
+
+  <header class="unnumbered" id="sec-front-matter">
+    <div id="doc-designator" itemtype="http://purl.org/dc/elements/1.1/">
+      <span itemprop="publisher">IMF UG</span> <span id="doc-type">BP</span> <span id="doc-number">002</span>-<span id="doc-part">yyy</span>:<span id="doc-pub-date" itemprop="date">zzzz</span>
+    </div>
+    <div id="long-doc-type">IMF User Group Best Practice</div>
+    <h1>Sample document</h1>
+    <div id="doc-status">Draft</div><!-- Draft, Published -->
+    <div id="doc-pubdate">12 June 2021</div><!-- date published in this format-->
+    <div>Issue tracker: <a id="doc-issues" href=""></a></div>
+  </header>
+
+  <section class="unnumbered" id='sec-scope'>
+    <h2>Scope</h2>
+    <p>This is the (mandatory) scope of the document.</p>
+  </section>
+
+  <section class="unnumbered" id="sec-sotd">
+    <h2>Status of this document</h2>
+
+    <!-- do not modify this -->
+
+    <p>This Best Practice is published by the <a href="https://www.imfug.com">IMF User Group</a>. It may be updated, replaced or
+    obsoleted by other documents at any time. Readers are encouraged to consult and contribute to the <a href="#doc-issues">issue
+    tracker</a>, which lists outstanding issues against the document.</p>
+    <p>©Hollywood Professional Association. Licensed under the <a href="https://creativecommons.org/licenses/by-nd/4.0/">
+    Creative Commons Attribution-NoDerivatives 4.0 International License </a>.</p>
+  </section>
+
+  <section class="unnumbered" id="sec-introduction">
+    <h2>Introduction</h2>
+    <p> <!-- do not modify this --> This section is entirely informative and does not form an integral part of this document.</p>
+
+    <p>This is the (optional) introduction of the document.</p>
+
+  </section>
+
+  <section class="unnumbered" id="sec-references">
+    <h2>References</h2>
+    <ul>
+      <li><cite id="bib-st2067-201-2019"><a href="https://doi.org/10.5594/SMPTE.ST2067-201.2019">SMPTE ST 2067-201:2019</a></cite>, Immersive Audio Bitstream Level 0 Plug-in</li>
+    </ul>
+  </section>
+
+  <section class="unnumbered" id="sec-terms">
+    <h2>Terms and definitions</h2>
+
+    <dl>
+      <dt id="term-1">This is a term</dt>
+      <dd>This is the definition of the term</dd>
+
+      <dt id="term-2">This is another term</dt>
+      <dd>This is the definition of the term</dd>
+    </dl>
+
+  </section>
+
+  <section id="sec-section-5">
+    <h2>A heading</h2>
+
+    <section id="sec-section-5-1">
+      <h3>A sub-heading</h3>
+
+      <p>This is a paragraph with a <code>keyword</code>.</p>
+
+      <p>This is a reference to <a href="#bib-st2067-201-2019"></a>.</p>
+
+      <p>This is an unordered list</p>
+
+      <ul>
+        <li>First item</li>
+        <li>Second item</li>
+      </ul>
+
+      <p>This is <a class="eq-ref" href="#eq-example-1"></a>:</p>
+
+      <figure class="equation" id="eq-example-1">
+        <math>
+          <mrow>
+            <munder>
+              <mo>&sum;</mo>
+              <mrow>
+                <mi>p</mi>
+                <mo>∈</mo>
+                <mtext>prime</mtext>
+              </mrow>
+            </munder>
+            <mi>f</mi>
+            <mo>(</mo>
+            <mi>p</mi>
+            <mo>)</mo>
+            <mo>=</mo>
+            <msub>
+              <mo>&int;</mo>
+              <mrow>
+                <mi>t</mi>
+                <mo>&gt;</mo>
+                <mn>1</mn>
+              </mrow>
+            </msub>
+            <mi>f</mi>
+            <mo>(</mo>
+            <mi>t</mi>
+            <mo>)</mo>
+            <mspace />
+            <mi>d</mi>
+            <mi>&pi;</mi>
+            <mo>(</mo>
+            <mi>t</mi>
+            <mo>)</mo>
+          </mrow>
+        </math>
+      </figure>
+
+      <p>This is an ordered list</p>
+
+      <ol>
+        <li>First item</li>
+        <li>Second item</li>
+      </ol>
+
+      <p class="note" id="sec-2-1-note-1">This is a note</p>
+    </section>
+
+    <section id="sec-section-5-2">
+      <h3>Another sub-heading</h3>
+
+      <p>This is a reference to <a class="sec-ref" href="#sec-section-5-1"></a>.</p>
+
+      <p class="note">This is another note</p>
+
+      <p>This is a reference to <a class="note-ref" href="#sec-2-1-note-1"></a>.</p>
+
+      <p>This is <a href="#table-1"></a>.</p>
+
+      <table id="table-1">
+        <caption>This is the caption for the table</caption>
+        <thead>
+          <tr>
+            <th>Header A</th>
+            <th>Header B</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>First data</td>
+            <td>Second data</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>This is <a class="fig-ref" href="#fig-example-1"></a>.</p>
+
+      <figure class="figure" id="fig-example-1">
+        <pre>rm -rf *</pre>
+        <figcaption>This is a code snippet</figcaption>
+      </figure>
+
+      <p>This is <a class="fig-ref" href="#fig-example-2"></a>.</p>
+
+      <figure class="figure" id="fig-example-2">
+        <img loading="lazy" src="sample.png" />
+        <figcaption>This is an image</figcaption>
+      </figure>
+
+    </section>
+
+  </section>
+
+</body>
+
+</html>
