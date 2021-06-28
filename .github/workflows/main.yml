@@ -28,13 +28,20 @@ jobs:
 
     - name: Run CI
       run: .github/scripts/build.sh
-      
+
+    - name: Deploy
+      if: github.ref == 'refs/heads/main'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build
+        
     - uses: jwalton/gh-find-current-pr@v1
       if: github.ref != 'refs/heads/main'
       id: find_current_pr
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        
+
     - uses: marocchino/sticky-pull-request-comment@v2
       if: github.ref != 'refs/heads/main' && steps.finder
       with:
