@@ -1,4 +1,4 @@
-#!/bin/sh -ex
+#!/bin/bash -ex
 
 BUILD_DIR=build
 SPEC_DIR=spec
