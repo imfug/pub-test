@@ -9,9 +9,9 @@ STAGING_S3_BUCKET=s3://staging-pub-imf-ug/drafts
 STAGING_PUB_BASE_URI=https://staging-pub.imfug.com/drafts
 COMMIT_HASH=$(git rev-parse HEAD)
 OLD_HASH=$(git rev-parse ${MAIN_BRANCH})
-NEW_SPEC_URL=${STAGING_PUB_BASE_URI}/${COMMIT_HASH}
+NEW_SPEC_URL=${STAGING_PUB_BASE_URI}/${COMMIT_HASH}/${RENDERED_SPEC_FILENAME}
 NEW_SPEC_ENCODED_URL=$(python -c "import urllib.parse; print(urllib.parse.quote(input()))" <<< ${NEW_SPEC_URL})
-OLD_SPEC_ENCODED_URL=$(python -c "import urllib.parse; print(urllib.parse.quote(input()))" <<< ${STAGING_PUB_BASE_URI}/${OLD_HASH})
+OLD_SPEC_ENCODED_URL=$(python -c "import urllib.parse; print(urllib.parse.quote(input()))" <<< ${STAGING_PUB_BASE_URI}/${OLD_HASH}/${RENDERED_SPEC_FILENAME})
 
 mkdir -p ${BUILD_DIR}
 
