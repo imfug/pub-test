@@ -27,7 +27,7 @@ jobs:
         aws-region: us-west-1
 
     - name: Run CI
-      run: scripts/build.sh
+      run: .github/scripts/build.sh
       
     - uses: jwalton/gh-find-current-pr@v1
       if: github.ref != 'refs/heads/main'
