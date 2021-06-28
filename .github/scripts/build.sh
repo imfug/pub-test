@@ -19,7 +19,7 @@ cp -Rf ${SPEC_DIR}/* ${BUILD_DIR}
 
 node ./.github/scripts/render-html.js ${BUILD_DIR}/${SPEC_FILENAME} ${BUILD_DIR}/${RENDERED_SPEC_FILENAME}
 
-echo "[HTML](${STAGING_PUB_BASE_URI}/${COMMIT_HASH})" > ${BUILD_DIR}/pr-links.txt
+echo "[HTML](${NEW_SPEC_URL})" > ${BUILD_DIR}/pr-links.txt
 echo "[Redline](https://services.w3.org/htmldiff?doc1=${OLD_SPEC_ENCODED_URL}&doc2=${NEW_SPEC_ENCODED_URL})" >> ${BUILD_DIR}/pr-links.txt
 
 aws s3 cp --recursive ${BUILD_DIR} ${STAGING_S3_BUCKET}/${COMMIT_HASH}
